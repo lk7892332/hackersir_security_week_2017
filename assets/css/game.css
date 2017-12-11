@@ -1,0 +1,13 @@
+body {
+    margin:0px;
+    background-image:url(../img/indexbg.jpg);
+    background-size:cover;
+}
+
+#gameContainer {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:auto;
+    height:100vh;
+}
