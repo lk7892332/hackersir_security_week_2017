@@ -126,7 +126,7 @@
             {
                 "type":"dialog",
                 "name":"ray",
-                "text":"（忽略@說的\n話）其實我的真正身份是\nHCLISE Ray",
+                "text":"（忽略@說的\n話）其實我的真正身份是\nHCLISE Ray。",
                 "next":18
             },
             {
@@ -138,7 +138,7 @@
             {
                 "type":"dialog",
                 "name":"ray",
-                "text":"Handsome Chic Lovely\nInformation Security\nExpert Ray",
+                "text":"Handsome Chic Lovely\nInformation Security\nExpert Ray.",
                 "next":20
             },
             {
@@ -354,7 +354,7 @@
             {
                 "type":"dialog",
                 "name":"empty",
-                "text":"給予@地圖後，\n薛老就消失了",
+                "text":"給予@地圖後，\n薛老就消失了。",
                 "next":15
             },
             {
