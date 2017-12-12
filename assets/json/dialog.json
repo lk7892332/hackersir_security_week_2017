@@ -42,7 +42,7 @@
             {
                 "type":"dialog",
                 "name":"fei",
-                "text":"哇！維護網路安全喔！那\n不就比駭客厲害好啊好啊\n！那我該怎麼做？",
+                "text":"哇！維護網路安全喔！那\n不就比駭客厲害？好啊好\n啊！那我該怎麼做？",
                 "next":7
             },
             {
@@ -69,7 +69,7 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"你確定不多考慮一下嗎？",
+                "text":"你確定不多考慮一下嗎？\n這本「駭客聖經秘笈」可\n是無價之寶，你我今日有\n緣，就收你十元傳授給你\n吧！",
                 "option":
                 [
                     "A:給他10元，取得秘笈",
@@ -90,7 +90,7 @@
             {
                 "type":"dialog",
                 "name":"fei",
-                "text":"但在封面上寫著快去\nIbdlfs Usbjojoh\nBdbefnz。",
+                "text":"但在封面上寫著快去\n「Ibdlfs Usbjojoh\nBdbefnz。」",
                 "next":12
             },
             {
@@ -114,7 +114,7 @@
             {
                 "type":"dialog",
                 "name":"ray",
-                "text":"我聽到你在說凱薩加密法\n，你一定很好奇我是誰？",
+                "text":"我聽到你在說凱薩加密法\n，嘿嘿，你一定很好奇我\n是誰。",
                 "next":16
             },
             {
@@ -174,7 +174,7 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！",
+                "text":"解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！\n（abc偏移一個單位\n變成bcd，dog變成eph。）",
                 "optionNum":2,
                 "option":
                 [
@@ -190,7 +190,7 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"你確定不多考慮一下嗎？\n解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！",
+                "text":"你確定不多考慮一下嗎？解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！\n（abc偏移一個單位\n變成bcd，dog變成eph。）",
                 "optionNum":-1,
                 "option":
                 [

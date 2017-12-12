@@ -607,17 +607,8 @@ game.States.ending = function() {
         }
         wordIndex++;
     };
-    this.skipAnimation = function() {
-        skipButton.visible = false;
-        game.time.events.remove(wordTimer);
-        dialogText.text = text;
-        nextButton.visible = true;
-    };
     this.clickScreen = function() {
-        if(skipButton.visible == true && nextButton.visible == false) {
-            this.skipAnimation();
-        }
-        else if(skipButton.visible == false && nextButton.visible == true) {
+        if(skipButton.visible == false && nextButton.visible == true) {
             dialog.visible = false;
             toMainButton.visible = true;
         }
