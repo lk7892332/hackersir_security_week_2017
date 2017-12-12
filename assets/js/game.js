@@ -8,7 +8,7 @@ var loadingTextStyle = {
 };
 
 var menuTextStyle = {
-    font:"bold 300px Microsoft JhengHei, Heiti TC",
+    font:"bold 160px Microsoft JhengHei, Heiti TC",
     fill:"#000000",
     boundsAlignH:"center",
     boundsAlignV:"middle"
@@ -67,7 +67,7 @@ game.States.boot = function() {
     };
 
     this.preload = function() {
-        game.load.image("loading", "assets/img/loading.png");
+        game.load.image("logo", "assets/img/logo.png");
     };
 
     this.create = function() {
@@ -80,7 +80,7 @@ game.States.loading = function() {
     var loadText;
 
     this.preload = function() {
-        loadImg = game.add.image(game.world.centerX, game.world.centerY, "loading");
+        loadImg = game.add.image(game.world.centerX, game.world.centerY, "logo");
         loadImg.anchor.setTo(0.5, 0.5);
         loadText = game.add.text(game.world.centerX, game.world.centerY + 500, "Loading...", loadingTextStyle);
         loadText.anchor.setTo(0.5, 0.5);
@@ -103,8 +103,10 @@ game.States.loading = function() {
         game.load.image("chapterbg1", "assets/img/chapterbg1.png");
         game.load.image("chapterbg2", "assets/img/chapterbg2.png");
         game.load.image("chapterbg3", "assets/img/chapterbg3.png");
+        game.load.spritesheet("toMemu", "assets/img/toMemu.png", 300, 100);
         game.load.spritesheet("startButton", "assets/img/startButton.png", 300, 100);
         game.load.spritesheet("feiWalk", "assets/img/feiWalk.png", 48, 48);
+        game.load.spritesheet("arrow", "assets/img/arrow.png", 128, 128);
         game.load.json("text", "assets/json/text.json");
         game.load.json("dialog", "assets/json/dialog.json");
         game.load.json("exchange", "https://blockchain.info/ticker");
@@ -122,7 +124,7 @@ game.States.mainMenu = function() {
 
     this.create = function() {
         game.add.image(0, 0, "titlebg");
-        var text = game.add.text(game.world.centerX, 150, "Title", menuTextStyle);
+        var text = game.add.text(game.world.centerX, 150, "HackerRPG", menuTextStyle);
         text.anchor.setTo(0.5);
         idInput = game.add.inputField(game.world.centerX-250, 300, idInputStyle);
         idInput.blockInput = false;
@@ -223,14 +225,22 @@ game.States.mainMenu = function() {
 };
 
 game.States.chapterMenu = function() {
+    var fei;
+    var arrow;
+
     this.create = function() {
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         game.add.image(0, 0, "chapterbg");
         fei = game.add.sprite(0, 0, "feiWalk");
-        fei.width = 164;
-        fei.height = 205;
+        fei.width = 120;
+        fei.height = 120;
         fei.animations.add("walk");
         fei.animations.play("walk", 5, true);
+        arrow = game.add.sprite(0, 0, "arrow");
+        arrow.width = 128;
+        arrow.height = 128;
+        arrow.animations.add("jump");
+        arrow.animations.play("jump", 5, true);
         ch1Button = game.add.button(220, 550, "chapterButton1", this.clickChButton, this);
         ch1Button.data = {chapter:0};
         ch2Button = game.add.button(670, 850, "chapterButton2", this.clickChButton, this);
@@ -253,8 +263,10 @@ game.States.chapterMenu = function() {
     this.processButton = function() {
         for(var i = 0; i < 4 ; i++) {
             if(i == game.glbalConfig.completeChapter) {
-                fei.x = chButtonArr[i].x;
-                fei.y = chButtonArr[i].y - 210;
+                fei.x = chButtonArr[i].x + 22;
+                fei.y = chButtonArr[i].y - 248;
+                arrow.x = chButtonArr[i].x + 22;
+                arrow.y = chButtonArr[i].y - 128;
             }
             if(i <= game.glbalConfig.completeChapter) {
                 chButtonArr[i].visible = true;
@@ -280,7 +292,7 @@ game.States.showText = function() {
     this.init = function() {
         content = "";
         wordIndex = 0;
-        wordDelay = 60;
+        wordDelay = 40;
         chapter = game.glbalConfig.currentChapter;
     };
     this.create = function() {
@@ -357,7 +369,7 @@ game.States.chapter = function() {
     this.init = function() {
         next = 0;
         wordIndex = 0;
-        wordDelay = 60;
+        wordDelay = 40;
         chapter = game.glbalConfig.currentChapter;
         nameArrA = ["fei", "xue", "leo", "ray", "empty"];
         nameArrB = [game.glbalConfig.name, "薛老", "Leo three", "國瑞", ""];
@@ -368,16 +380,18 @@ game.States.chapter = function() {
         chapterbg = game.add.image(0, 0, "empty");
         dialog = game.add.group();
         dialogBg = game.add.image(0, 1080, "dialogBorder");
-        nameBg = game.add.image(0, 900, "nameBorder");
-        charName = game.add.text(10, 940, "", storyTextStyle);
-        charPic = game.add.image(430, 200, "empty");
-        charPic.anchor.setTo(1, 0);
+        charPic = game.add.image(650, 200, "empty");
         charPic.scale.setTo(0.64);
+        nameBg = game.add.image(638, 900, "nameBorder");
+        nameBg.anchor.setTo(1, 0);
+        nameBg.scale.setTo(-1, 1);
+        charName = game.add.text(875, 986, "", storyTextStyle);
+        charName.anchor.setTo(0.5, 0.5);
         dialogText = game.add.text(130, 1280, "", storyTextStyle);
         nextButton = game.add.button(930, 1790, "nextButton", void(null), this);
         nextButton.visible = false;
         skipButton = game.add.button(930, 1790, "nextButton", void(null), this);
-        dialog.addMultiple([dialogBg, charPic, dialogText, nextButton, skipButton]);
+        dialog.addMultiple([dialogBg, charPic, nameBg, charName, dialogText, nextButton, skipButton]);
         dialog.visible = false;
         optionGroup = game.add.group();
         optionGroup.visible = false;
@@ -414,6 +428,27 @@ game.States.chapter = function() {
             }
             else {
                 nameBg.visible = true;
+            }
+            if(name == "fei") {
+                charPic.x = 430;
+                charPic.y = 200;
+                charPic.anchor.setTo(1, 0);
+                charPic.scale.setTo(0.64);
+                nameBg.x = 0;
+                nameBg.y = 900;
+                charName.x = 205;
+                charName.y = 986;
+            }
+            else {
+                charPic.x = 650;
+                charPic.y = 200;
+                charPic.anchor.setTo(0, 0);
+                nameBg.x = 638;
+                nameBg.y = 900;
+                nameBg.anchor.setTo(1, 0);
+                nameBg.scale.setTo(-1, 1);
+                charName.x = 875;
+                charName.y = 986;
             }
             charName.text = nameArrB[nameArrA.indexOf(name)];
             chapterbg.loadTexture(json[chapter].chapter);
@@ -489,7 +524,7 @@ game.States.chapter = function() {
                 }
             });
         }
-    }
+    };
     this.clickScreen = function() {
         if(skipButton.visible == true && nextButton.visible == false) {
             this.skipAnimation();
@@ -497,22 +532,76 @@ game.States.chapter = function() {
         else if(skipButton.visible == false && nextButton.visible == true) {
             this.processDialog();
         }
-    }
+    };
 };
 
 game.States.ending = function() {
+    var dialogBg;
+    var dialogText;
+    var nextButton;
+    var skipButton;
+    var optionGroup;
+    var wordIndex;
+    var wordDelay;
+    var wordTimer;
+    var text;
+    var toMainButton;
+    var logo;
+
+    this.init = function() {
+        text = "此時你才恍然大悟，終於\n明白駭客訓練學院，就是\n黑客社。";
+        wordIndex = 0;
+        wordDelay = 40;
+    };
     this.create = function() {
         game.add.image(0, 0, "chapterbg3");
-        var text = game.add.text(game.world.centerX, 0, "www.facebook.com/\nHackerSir.tw", storyTextStyle);
-        text.anchor.setTo(0.5, 0.5);
-        text.inputEnabled = true;
-        text.events.onInputDown.add(this.clickURL, this);
-        game.add.tween(text).to({x:game.world.centerX, y:game.world.centerY}, 1000, Phaser.Easing.Linear.None, true);
-        var textToMain = game.add.text(game.world.centerX, game.world.centerY + 300, "回主畫面", storyTextStyle);
-        textToMain.anchor.setTo(0.5, 0.5);
-        textToMain.inputEnabled = true;
-        textToMain.events.onInputDown.add(this.toMain, this);
+        toMainButton = game.add.button(game.world.centerX, game.world.centerY, "toMemu", this.toMain, this, 1, 0, 1, 0);
+        toMainButton.anchor.setTo(0.5, 0.5);
+        toMainButton.visible = false;
+        logo = game.add.image(game.world.centerX, -250, "logo");
+        logo.anchor.setTo(0.5, 0.5);
+        logo.inputEnabled = true;
+        logo.events.onInputDown.add(this.clickURL, this);
+        var logoAni = game.add.tween(logo).to({x:game.world.centerX, y:game.world.centerY - 400}, 1000, Phaser.Easing.Linear.None, true);
+        logoAni.onComplete.add(this.showDialog, this);
+        dialog = game.add.group();
+        dialogBg = game.add.image(0, 1080, "dialogBorder");
+        dialogText = game.add.text(130, 1280, "", storyTextStyle);
+        nextButton = game.add.button(930, 1790, "nextButton", void(null), this);
+        nextButton.visible = false;
+        skipButton = game.add.button(930, 1790, "nextButton", void(null), this);
+        dialog.addMultiple([dialogBg, dialogText, nextButton, skipButton]);
+        dialog.visible = false;
+        game.input.onDown.add(this.clickScreen, this);
     };
+    this.showDialog = function() {
+        dialog.visible = true;
+        wordTimer = game.time.events.repeat(wordDelay, text.length, this.nextWord, this);
+    };
+    this.nextWord = function() {
+        skipButton.visible = true;
+        dialogText.text += text[wordIndex];
+        if(wordIndex == text.length - 1) {
+            skipButton.visible = false;
+            nextButton.visible = true;
+        }
+        wordIndex++;
+    };
+    this.skipAnimation = function() {
+        skipButton.visible = false;
+        game.time.events.remove(wordTimer);
+        dialogText.text = text;
+        nextButton.visible = true;
+    };
+    this.clickScreen = function() {
+        if(skipButton.visible == true && nextButton.visible == false) {
+            this.skipAnimation();
+        }
+        else if(skipButton.visible == false && nextButton.visible == true) {
+            dialog.visible = false;
+            toMainButton.visible = true;
+        }
+    }
     this.toMain = function() {
         game.state.start("chapterMenu");
     };

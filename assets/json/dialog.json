@@ -96,13 +96,13 @@
             {
                 "type":"dialog",
                 "name":"empty",
-                "text":"就在這時，一道黑影突然\n閃過，一名不知名的男子\n出現了！他開始介紹道",
+                "text":"就在這時，一道黑影突然\n閃過，一位不知名的男子\n出現了！他開始介紹道",
                 "next":13
             },
             {
                 "type":"dialog",
                 "name":"ray",
-                "text":"我的真正身份是\nHTIISE Ray",
+                "text":"我的真正身份是\nHCLISE Ray",
                 "next":14
             },
             {
@@ -114,7 +114,7 @@
             {
                 "type":"dialog",
                 "name":"ray",
-                "text":"Handsome chicer lovely\nInformation security\nexpert Ray",
+                "text":"Handsome Chic Lovely\nInformation Security\nExpert Ray",
                 "next":16
             },
             {
