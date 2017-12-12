@@ -567,7 +567,7 @@ game.States.ending = function() {
     var text;
     var toMainButton;
     var logo;
-    var message = "恭喜你完成RPG闖關，獲得抽獎的機會，記得在12/20（三）上午10點開始到下午5點前於忠勤樓前廣場攤位進行抽獎，獎品有限，要早點來喔！"
+    var message = "恭喜你完成RPG闖關，獲得抽獎的機會，記得在12/20(三)上午10點到下午5點前至忠勤樓前廣場攤位進行抽獎，獎品有限，越早來機會越大喔！"
 
     this.init = function() {
         text = "此時你才恍然大悟，終於\n明白駭客訓練學院，就是\n黑客社。";
