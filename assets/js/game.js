@@ -1,13 +1,34 @@
 var game = new Phaser.Game(1080, 1920, Phaser.CANVAS, "gameContainer");
 
-menuTextStyle = {
+var loadingTextStyle = {
+    font:"bold 50px Microsoft JhengHei, Heiti TC",
+    fill:"#ffffff",
+    boundsAlignH:"center",
+    boundsAlignV:"middle"
+};
+
+var menuTextStyle = {
     font:"bold 300px Microsoft JhengHei, Heiti TC",
     fill:"#000000",
     boundsAlignH:"center",
     boundsAlignV:"middle"
 };
 
-idInputStyle = {
+var storyTextStyle = {
+    font:"bold 70px Microsoft JhengHei, Heiti TC",
+    fill:"#000000",
+    boundsAlignH:"center",
+    boundsAlignV:"middle"
+};
+
+var optionTextStyle = {
+    font:"bold 70px Microsoft JhengHei, Heiti TC",
+    fill:"#000000",
+    boundsAlignH:"center",
+    boundsAlignV:"middle"
+};
+
+var idInputStyle = {
     font:"80px Microsoft JhengHei, Heiti TC",
     fontWeight:"bold",
     width:500,
@@ -18,7 +39,7 @@ idInputStyle = {
     placeHolder:"請輸入學號"
 };
 
-nameInputStyle = {
+var nameInputStyle = {
     font:"80px Microsoft JhengHei, Heiti TC",
     fontWeight:"bold",
     width:500,
@@ -30,20 +51,6 @@ nameInputStyle = {
     placeHolder:"請輸入暱稱"
 };
 
-storyTextStyle = {
-    font:"bold 70px Microsoft JhengHei, Heiti TC",
-    fill:"#000000",
-    boundsAlignH:"center",
-    boundsAlignV:"middle"
-};
-
-optionTextStyle = {
-    font:"bold 70px Microsoft JhengHei, Heiti TC",
-    fill:"#000000",
-    boundsAlignH:"center",
-    boundsAlignV:"middle"
-};
-
 game.States = {};
 game.glbalConfig = {
     googleURL:"https://script.google.com/a/mail.fcu.edu.tw/macros/s/AKfycbxzHdzmLmIHZ9FmeaCWCfaQ05JUt0qo_cHCuyq33aVNmKUx1sE/exec",
@@ -53,19 +60,66 @@ game.glbalConfig = {
     currentChapter:0
 };
 
+game.States.boot = function() {
+    this.init = function() {
+        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        game.add.plugin(PhaserInput.Plugin);
+    };
+
+    this.preload = function() {
+        game.load.image("loading", "assets/img/loading.png");
+    };
+
+    this.create = function() {
+        game.state.start("loading");
+    };
+}
+
+game.States.loading = function() {
+    var loadImg;
+    var loadText;
+
+    this.preload = function() {
+        loadImg = game.add.image(game.world.centerX, game.world.centerY, "loading");
+        loadImg.anchor.setTo(0.5, 0.5);
+        loadText = game.add.text(game.world.centerX, game.world.centerY + 500, "Loading...", loadingTextStyle);
+        loadText.anchor.setTo(0.5, 0.5);
+        game.load.image("titlebg", "assets/img/titlebg.png");
+        game.load.image("chapterbg", "assets/img/chapterbg.png");
+        game.load.image("chapterButton1", "assets/img/chapterButton1.png");
+        game.load.image("chapterButton2", "assets/img/chapterButton2.png");
+        game.load.image("chapterButton3", "assets/img/chapterButton3.png");
+        game.load.image("chapterButton4", "assets/img/chapterButton4.png");
+        game.load.image("nextButton", "assets/img/nextButton.png");
+        game.load.image("fei", "assets/img/fei.png");
+        game.load.image("xue", "assets/img/xue.png");
+        game.load.image("leo", "assets/img/leo.png");
+        game.load.image("ray", "assets/img/ray.png");
+        game.load.image("empty", "assets/img/empty.png");
+        game.load.image("optionBorder", "assets/img/optionBorder.png");
+        game.load.image("dialogBorder", "assets/img/dialogBorder.png");
+        game.load.image("nameBorder", "assets/img/nameBorder.png");
+        game.load.image("chapterbg0", "assets/img/chapterbg0.png");
+        game.load.image("chapterbg1", "assets/img/chapterbg1.png");
+        game.load.image("chapterbg2", "assets/img/chapterbg2.png");
+        game.load.image("chapterbg3", "assets/img/chapterbg3.png");
+        game.load.spritesheet("startButton", "assets/img/startButton.png", 300, 100);
+        game.load.spritesheet("feiWalk", "assets/img/feiWalk.png", 48, 48);
+        game.load.json("text", "assets/json/text.json");
+        game.load.json("dialog", "assets/json/dialog.json");
+        game.load.json("exchange", "https://blockchain.info/ticker");
+    };
+
+    this.create = function() {
+        game.state.start("mainMenu");
+    }
+}
+
 game.States.mainMenu = function() {
     var idInput;
     var nameInput;
     var startButton;
 
-    this.init = function() {
-        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        game.add.plugin(PhaserInput.Plugin);
-    };
-    this.preload = function() {
-        game.load.image("titlebg", "assets/img/titlebg.png");
-        game.load.spritesheet("startButton", "assets/img/startButton.png", 300, 100)
-    };
     this.create = function() {
         game.add.image(0, 0, "titlebg");
         var text = game.add.text(game.world.centerX, 150, "Title", menuTextStyle);
@@ -169,14 +223,6 @@ game.States.mainMenu = function() {
 };
 
 game.States.chapterMenu = function() {
-    this.preload = function() {
-        game.load.image("chapterbg", "assets/img/chapterbg.png");
-        game.load.spritesheet("feiWalk", "assets/img/feiWalk.png", 48, 48);
-        game.load.image("chapterButton1", "assets/img/chapterButton1.png");
-        game.load.image("chapterButton2", "assets/img/chapterButton2.png");
-        game.load.image("chapterButton3", "assets/img/chapterButton3.png");
-        game.load.image("chapterButton4", "assets/img/chapterButton4.png");
-    };
     this.create = function() {
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         game.add.image(0, 0, "chapterbg");
@@ -237,18 +283,10 @@ game.States.showText = function() {
         wordDelay = 60;
         chapter = game.glbalConfig.currentChapter;
     };
-    this.preload = function() {
-        game.load.image("bg", "assets/img/chapterbg3.png");
-        game.load.image("nextButton", "assets/img/nextButton.png");
-        game.load.json("text", "assets/json/text.json");
-        if(chapter == 3) {
-            game.load.json("exchange", "https://blockchain.info/ticker");
-        }
-    };
     this.create = function() {
         var json = game.cache.getJSON("text");
         content = json[chapter].text;
-        game.add.image(0, 0, "bg");
+        game.add.image(0, 0, "chapterbg3");
         var bar = game.add.graphics();
         bar.beginFill(0xffffff, 0.5);
         bar.drawRect(78, game.world.centerY - 350, 918, 700);
@@ -324,21 +362,7 @@ game.States.chapter = function() {
         nameArrA = ["fei", "xue", "leo", "ray", "empty"];
         nameArrB = [game.glbalConfig.name, "薛老", "Leo three", "國瑞", ""];
     };
-    this.preload = function() {
-        game.load.json("dialog", "assets/json/dialog.json")
-        game.load.image("fei", "assets/img/fei.png");
-        game.load.image("xue", "assets/img/xue.png");
-        game.load.image("leo", "assets/img/leo.png");
-        game.load.image("ray", "assets/img/ray.png");
-        game.load.image("empty", "assets/img/empty.png");
-        game.load.image("optionBorder", "assets/img/optionBorder.png");
-        game.load.image("dialogBorder", "assets/img/dialogBorder.png");
-        game.load.image("nameBorder", "assets/img/nameBorder.png");
-        game.load.image("chapterbg0", "assets/img/chapterbg0.png");
-        game.load.image("chapterbg1", "assets/img/chapterbg1.png");
-        game.load.image("chapterbg2", "assets/img/chapterbg2.png");
-        game.load.image("chapterbg3", "assets/img/chapterbg3.png");
-    };
+
     this.create = function() {
         json = game.cache.getJSON("dialog");
         chapterbg = game.add.image(0, 0, "empty");
@@ -477,11 +501,8 @@ game.States.chapter = function() {
 };
 
 game.States.ending = function() {
-    this.preload = function() {
-        game.load.image("chapterbg", "assets/img/chapterbg3.png");
-    };
     this.create = function() {
-        game.add.image(0, 0, "chapterbg");
+        game.add.image(0, 0, "chapterbg3");
         var text = game.add.text(game.world.centerX, 0, "www.facebook.com/\nHackerSir.tw", storyTextStyle);
         text.anchor.setTo(0.5, 0.5);
         text.inputEnabled = true;
@@ -500,9 +521,11 @@ game.States.ending = function() {
     }
 };
 
+game.state.add("boot", game.States.boot);
+game.state.add("loading", game.States.loading);
 game.state.add("mainMenu", game.States.mainMenu);
 game.state.add("chapterMenu", game.States.chapterMenu);
 game.state.add("showText", game.States.showText);
 game.state.add("chapter", game.States.chapter);
 game.state.add("ending", game.States.ending);
-game.state.start("mainMenu");
+game.state.start("boot");
