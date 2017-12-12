@@ -11,45 +11,45 @@
             },
             {
                 "type":"dialog",
-                "name":"empty",
-                "text":"啥?你說什麼我怎麼聽不懂?\n(難道我剛剛放屁被他發現了?)",
-                "next":!!!!!!
-            },
-            {
-                "type":"dialog",
-                "name":"xue",
-                "text":"年紀輕輕的，就有一身橫\n練的筋骨，簡直是百年一\n見的駭客奇材。",
+                "name":"fei",
+                "text":"啥？你說什麼我怎麼聽不\n懂？（難道我剛剛放屁被\n他發現了？）",
                 "next":2
             },
             {
                 "type":"dialog",
                 "name":"xue",
-                "text":"如果有一天，讓你打通任\n督二脈，那還不飛天啦！",
+                "text":"年紀輕輕的，就有一身橫\n練的筋骨，簡直是百年一\n見的駭客奇材。",
                 "next":3
             },
             {
                 "type":"dialog",
                 "name":"xue",
-                "text":"正所謂，我不入地獄，誰\n入地獄？",
+                "text":"如果有一天，讓你打通任\n督二脈，那還不飛天啦！",
                 "next":4
             },
             {
                 "type":"dialog",
                 "name":"xue",
-                "text":"警惡懲奸，維護網路和平\n的任務，就交給你了，好\n不好？",
+                "text":"正所謂，我不入地獄，誰\n入地獄？",
                 "next":5
             },
             {
                 "type":"dialog",
-                "name":"empty",
-                "text":"哇!維護網路安全喔!那不就比駭客厲害\n好啊好啊!\n那我該怎麼做?",
-                "next":!!!!!!
+                "name":"xue",
+                "text":"警惡懲奸，維護網路和平\n的任務，就交給你了，好\n不好？",
+                "next":6
+            },
+            {
+                "type":"dialog",
+                "name":"fei",
+                "text":"哇！維護網路安全喔！那\n不就比駭客厲害好啊好啊\n！那我該怎麼做？",
+                "next":7
             },
             {
                 "type":"dialog",
                 "name":"xue",
                 "text":"這本「駭客聖經秘笈」可\n是無價之寶，你我今日有\n緣，就收你十元傳授給你\n吧！",
-                "next":6
+                "next":8
             },
             {
                 "type":"option",
@@ -62,8 +62,8 @@
                 ],
                 "next":
                 [
-                    8,
-                    7
+                    10,
+                    9
                 ]
             },
             {
@@ -77,99 +77,99 @@
                 ],
                 "next":
                 [
-                    8,
-                    7
+                    10,
+                    9
                 ]
             },
             {
                 "type":"dialog",
-                "name":"empty",
-                "text":"OOXX他是不是騙我啊!這本書怎麼都寫一些我看不懂的文字?",
-                "next":9
-            },
-            {
-                "type":"dialog",
-                "name":"empty",
-                "text":"但在封面上寫著快去\nIbdlfs Usbjojoh\nBdbefnz。",
-                "next":10
-            },
-            {
-                "type":"dialog",
-                "name":"empty",
-                "text":"那裏的人會告訴你秘笈的\n秘密，地點用凱薩加密法\n加密起來了。",
+                "name":"fei",
+                "text":"OOXX他是不是騙我啊！\n這本書怎麼都寫一些我看\n不懂的文字？",
                 "next":11
             },
             {
                 "type":"dialog",
-                "name":"empty",
-                "text":"凱薩加密法？這是什麼東西啊？可以吃嗎？",
+                "name":"fei",
+                "text":"但在封面上寫著快去\nIbdlfs Usbjojoh\nBdbefnz。",
                 "next":12
+            },
+            {
+                "type":"dialog",
+                "name":"fei",
+                "text":"那裏的人會告訴你秘笈的\n秘密，地點用凱薩加密法\n加密起來了。",
+                "next":13
+            },
+            {
+                "type":"dialog",
+                "name":"fei",
+                "text":"凱薩加密法？這是什麼東\n西啊？可以吃嗎？",
+                "next":14
             },
             {
                 "type":"dialog",
                 "name":"empty",
                 "text":"就在這時，一道黑影突然\n閃過，一位不知名的男子\n出現了！他開始介紹道",
-                "next":13
-            },
-            {
-                "type":"dialog",
-                "name":"ray",
-                "text":"我聽到你在說凱薩加密法，你一定很好奇我是誰？",
-                "next":!!!!!!
-            },
-            {
-                "type":"dialog",
-                "name":"empty",
-                "text":"沒有阿，我一點都不好奇",
-                "next":!!!!!!
-            },
-            {
-                "type":"dialog",
-                "name":"ray",
-                "text":"(忽略@說的話)其實我的真正身份是\nHCLISE Ray",
-                "next":14
-            },
-            {
-                "type":"dialog",
-                "name":"fei",
-                "text":"那是啥？可以吃嗎？",
                 "next":15
             },
             {
                 "type":"dialog",
                 "name":"ray",
-                "text":"Handsome Chic Lovely\nInformation Security\nExpert Ray",
+                "text":"我聽到你在說凱薩加密法\n，你一定很好奇我是誰？",
                 "next":16
             },
             {
                 "type":"dialog",
-                "name":"ray",
-                "text":"中文翻譯叫做英俊瀟灑可\n愛的資訊安全專家國瑞。",
+                "name":"fei",
+                "text":"沒有阿，我一點都不好奇",
                 "next":17
             },
             {
                 "type":"dialog",
                 "name":"ray",
-                "text":"就讓我來提示你什麼是凱\n薩加密法吧！！",
+                "text":"（忽略@說的\n話）其實我的真正身份是\nHCLISE Ray",
                 "next":18
             },
             {
                 "type":"dialog",
-                "name":"ray",
-                "text":"所謂的凱薩加密法就是將\n單字的字母做偏移。",
+                "name":"fei",
+                "text":"那是啥？可以吃嗎？",
                 "next":19
             },
             {
                 "type":"dialog",
                 "name":"ray",
-                "text":"例如：abc偏移一個單位\n變成bcd，dog變成eph。",
+                "text":"Handsome Chic Lovely\nInformation Security\nExpert Ray",
                 "next":20
             },
             {
                 "type":"dialog",
                 "name":"ray",
-                "text":"好了提示就到這邊，還有\n其他人需要我的幫助，我\n先走了！",
+                "text":"中文翻譯叫做英俊瀟灑可\n愛的資訊安全專家國瑞。",
                 "next":21
+            },
+            {
+                "type":"dialog",
+                "name":"ray",
+                "text":"就讓我來提示你什麼是凱\n薩加密法吧！！",
+                "next":22
+            },
+            {
+                "type":"dialog",
+                "name":"ray",
+                "text":"所謂的凱薩加密法就是將\n單字的字母做偏移。",
+                "next":23
+            },
+            {
+                "type":"dialog",
+                "name":"ray",
+                "text":"例如：abc偏移一個單位\n變成bcd，dog變成eph。",
+                "next":24
+            },
+            {
+                "type":"dialog",
+                "name":"ray",
+                "text":"好了提示就到這邊，還有\n其他人需要我的幫助，我\n先走了！",
+                "next":25
             },
             {
                 "type":"option",
@@ -179,12 +179,12 @@
                 "option":
                 [
                     "A: Hacker Training\nAcademy\n（駭客訓練學院）",
-                    "B: Hackersir (黑客社)"
+                    "B: Hackersir （黑客社）"
                 ],
                 "next":
                 [
                     -1,
-                    22
+                    26
                 ]
             },
             {
@@ -195,12 +195,12 @@
                 "option":
                 [
                     "A: Hacker Training Academy\n（駭客訓練學院）",
-                    "B: Hackersir (黑客社)"
+                    "B: Hackersir （黑客社）"
                 ],
                 "next":
                 [
                     -1,
-                    22
+                    26
                 ]
             }
         ]
@@ -212,13 +212,13 @@
             {
                 "type":"dialog",
                 "name":"xue",
-                "text":"稍等一下，駭客訓練學院是一個會教\n導一切有關於電腦知識的\n地方。",
+                "text":"稍等一下，駭客訓練學院\n是一個會教導一切有關於\n電腦知識的地方。",
                 "next":1
             },
                         {
                 "type":"dialog",
                 "name":"xue",
-                "text":"但我看你好像手頭沒教材，在去學院之前你必須先\n給我10元，跟我買教材。",
+                "text":"但我看你好像手頭沒教材\n，在去學院之前你必須先\n給我10元，跟我買教材。",
                 "next":2
             },
             {
@@ -254,37 +254,37 @@
             {
                 "type":"dialog",
                 "name":"fei",
-                "text":"可惡!我把我身上的錢都給他了!",
-                "next":!!!!!
-            },
-            {
-                "type":"dialog",
-                "name":"xue",
-                "text":"你把你全部的錢都給我了，但是想要繼續走下去，你必須先賺到旅費才能。",
+                "text":"可惡！我把我身上的錢都\n給他了！",
                 "next":5
             },
             {
                 "type":"dialog",
                 "name":"xue",
-                "text":"我就好心的提示你，繼續走會有一位叫做\nLeo three的人可以幫助\n到你。",
+                "text":"你把你全部的錢都給我了\n，但是想要繼續走下去，\n你必須先賺到旅費才能。",
                 "next":6
             },
             {
                 "type":"dialog",
                 "name":"xue",
-                "text":"但我是不會白白給你地圖\n讓你找到他的，你要先幫\n我解決一個小小的電腦問\n題才行。",
+                "text":"我就好心的提示你，繼續\n走會有一位叫做Leo three\n的人可以幫助\n到你。",
                 "next":7
             },
             {
                 "type":"dialog",
+                "name":"xue",
+                "text":"但我是不會白白給你地圖\n讓你找到他的，你要先幫\n我解決一個小小的電腦問\n題才行。",
+                "next":8
+            },
+            {
+                "type":"dialog",
                 "name":"fei",
-                "text":"這樣還叫作好心?",
-                "next":!!!!!
+                "text":"這樣還叫作好心？",
+                "next":9
             },
             {
                 "type":"option",
                 "name":"xue",
-                "text":"我怕電腦中勒索病毒\n，因為我電腦裡有很多武\n功秘笈，你能不能告訴我\n怎樣才能避免勒索病毒？",
+                "text":"我怕電腦中勒索病毒，因\n為我電腦裡有很多武功秘\n笈，你能不能告訴我怎樣\n才能避免勒索病毒？",
                 "optionNum":3,
                 "option":
                 [
@@ -293,14 +293,14 @@
                 ],
                 "next":
                 [
-                    9,
-                    8
+                    11,
+                    10
                 ]
             },
             {
                 "type":"option",
                 "name":"xue",
-                "text":"你確定不多考慮一下嗎？\n我怕電腦中勒索病毒\n，因為我電腦裡有很多武\n功秘笈，你能不能告訴我\n怎樣才能避免勒索病毒？",
+                "text":"你確定不多考慮一下嗎？\n我怕電腦中勒索病毒，因\n為我電腦裡有很多武功秘\n笈，你能不能告訴我怎樣\n才能避免勒索病毒？",
                 "optionNum":-1,
                 "option":
                 [
@@ -309,14 +309,14 @@
                 ],
                 "next":
                 [
-                    9,
-                    8
+                    11,
+                    10
                 ]
             },
             {
                 "type":"option",
                 "name":"xue",
-                "text":"最近我的網頁一直跳\n出視窗，說點擊視窗就送\n我如來神掌秘笈，我好想\n要，請問我可以點嗎？",
+                "text":"最近我的網頁一直跳出視\n窗，說點擊視窗就送我如\n來神掌秘笈，我好想要，\n請問我可以點嗎？",
                 "optionNum":4,
                 "option":
                 [
@@ -325,14 +325,14 @@
                 ],
                 "next":
                 [
-                    -1,
-                    10
+                    13,
+                    12
                 ]
             },
             {
                 "type":"option",
                 "name":"xue",
-                "text":"你確定不多考慮一下嗎？\n最近我的網頁一直跳\n出視窗，說點擊視窗就送\n我如來神掌秘笈，我好想\n要，請問我可以點嗎？",
+                "text":"你確定不多考慮一下嗎？\n最近我的網頁一直跳出視\n窗，說點擊視窗就送我如\n來神掌秘笈，我好想要，\n請問我可以點嗎？",
                 "optionNum":-1,
                 "option":
                 [
@@ -341,27 +341,27 @@
                 ],
                 "next":
                 [
-                    -1,
-                    10
+                    13,
+                    12
                 ]
             },
             {
                 "type":"dialog",
                 "name":"xue",
-                "text":"既然你幫我解決了問題，我就把地圖給你吧!(給予@地圖)",
-                "next":!!!!!
+                "text":"既然你幫我解決了問題，\n我就把地圖給你吧！\n（給予@地圖）",
+                "next":14
             },
             {
                 "type":"dialog",
                 "name":"empty",
-                "text":"給予@地圖後，薛老舊消失了",
-                "next":!!!!!
+                "text":"給予@地圖後，\n薛老就消失了",
+                "next":15
             },
             {
                 "type":"dialog",
                 "name":"fei",
-                "text":"既然拿到地圖，我就去找Leo three解決問題吧!",
-                "next":!!!!!
+                "text":"既然拿到地圖，我就去找\nLeo three解決問題吧！",
+                "next":-1
             }
         ]
     },
@@ -390,14 +390,14 @@
             {
                 "type":"dialog",
                 "name":"fei",
-                "text":"...好，隨便，請問你可以告訴我賺錢的方法嗎？",
-                "next":!!!!!
-            }
+                "text":"...好，隨便，請問你可以\n告訴我賺錢的方法嗎？",
+                "next":4
+            },
             {
                 "type":"dialog",
                 "name":"leo",
-                "text":"可以\n，但在這之前你必須先回\n答我幾個問題。",
-                "next":4
+                "text":"可以，但在這之前你必須\n先回答我幾個問題。",
+                "next":5
             },
             {
                 "type":"option",
@@ -411,8 +411,8 @@
                 ],
                 "next":
                 [
-                    6,
-                    5
+                    7,
+                    6
                 ]
             },
             {
@@ -427,8 +427,8 @@
                 ],
                 "next":
                 [
-                    6,
-                    5
+                    7,
+                    6
                 ]
             },
             {
@@ -443,8 +443,8 @@
                 ],
                 "next":
                 [
-                    8,
-                    7
+                    9,
+                    8
                 ]
             },
             {
@@ -459,8 +459,8 @@
                 ],
                 "next":
                 [
-                    8,
-                    7
+                    9,
+                    8
                 ]
             },
             {
@@ -476,7 +476,7 @@
                 "next":
                 [
                     -1,
-                    9
+                    10
                 ]
             },
             {
@@ -492,7 +492,7 @@
                 "next":
                 [
                     -1,
-                    9
+                    10
                 ]
             }
         ]
@@ -504,20 +504,20 @@
              {
                 "type":"dialog",
                 "name":"fei",
-                "text":"既然籌到旅費了，我要繼續冒險啦!",
-                "next":!!!!!!
+                "text":"既然籌到旅費了，我要繼\n續冒險啦！",
+                "next":1
             },
              {
                  "type":"dialog",
                  "name":"empty",
                  "text":"#你以為故事結束了嗎？",
-                 "next":1
+                 "next":2
              },
              {
                  "type":"dialog",
                  "name":"empty",
                  "text":"當然還沒",
-                 "next":2
+                 "next":3
              },
              {
                  "type":"dialog",

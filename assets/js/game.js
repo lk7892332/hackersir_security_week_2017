@@ -434,9 +434,7 @@ game.States.chapter = function() {
             next = json[chapter].content[next].next;
             dialogText.text = "";
             wordIndex = 0;
-            if(chapter == 0) {
-                text = text.replace(/@/, game.glbalConfig.name);
-            }
+            text = text.replace(/@/, game.glbalConfig.name);
             if(chapter == 3) {
                 if(game.glbalConfig.realName != "") {
                     game.glbalConfig.realName += "，\n";
@@ -456,6 +454,8 @@ game.States.chapter = function() {
                 charPic.scale.setTo(0.64);
                 nameBg.x = 0;
                 nameBg.y = 900;
+                nameBg.anchor.setTo(0, 0);
+                nameBg.scale.setTo(1, 1);
                 charName.x = 205;
                 charName.y = 986;
             }
