@@ -90,7 +90,7 @@
             {
                 "type":"dialog",
                 "name":"fei",
-                "text":"但在封面上寫著快去\n「Ibdlfs Usbjojoh\nBdbefnz。」",
+                "text":"但在封面上寫著快去\n「Ibdlfs Usbjojoh\nBdbefnz」。",
                 "next":12
             },
             {
@@ -190,11 +190,11 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"你確定不多考慮一下嗎？解出用凱薩加密法加\n密的「Ibdlfs Usbjojoh\nBdbefnz」吧！\n（abc偏移一個單位\n變成bcd，dog變成eph。）",
+                "text":"你確定不多考慮一下嗎？\n解出用凱薩加密法加\n密的「Ibdlfs Usbjojoh\nBdbefnz」吧！\n（abc偏移一個單位\n變成bcd，dog變成eph。）",
                 "optionNum":-1,
                 "option":
                 [
-                    "A: Hacker Training Academy\n（駭客訓練學院）",
+                    "A: Hacker Training\nAcademy\n（駭客訓練學院）",
                     "B: Hackersir （黑客社）"
                 ],
                 "next":
