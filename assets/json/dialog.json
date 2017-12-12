@@ -166,7 +166,7 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"你確定不多考慮一下嗎？",
+                "text":"你確定不多考慮一下嗎？\nQ1:解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！",
                 "optionNum":-1,
                 "option":
                 [
@@ -264,7 +264,7 @@
             {
                 "type":"option",
                 "name":"xue",
-                "text":"你確定不多考慮一下嗎？",
+                "text":"你確定不多考慮一下嗎？\nQ2:我怕電腦中勒索病毒\n，因為我電腦裡有很多武\n功秘笈，你能不能告訴我\n怎樣才能避免勒索病毒？",
                 "optionNum":-1,
                 "option":
                 [
@@ -296,7 +296,7 @@
             {
                 "type":"option",
                 "name":"xue",
-                "text":"你確定不多考慮一下嗎？",
+                "text":"你確定不多考慮一下嗎？\nQ3:最近我的網頁一直跳\n出視窗，說點擊視窗就送\n我如來神掌秘笈，我好想\n要，請問我可以點嗎？",
                 "optionNum":-1,
                 "option":
                 [
@@ -358,7 +358,7 @@
             {
                 "type":"option",
                 "name":"leo",
-                "text":"你確定不多考慮一下嗎？",
+                "text":"你確定不多考慮一下嗎？\nQ4:甚麼是區塊鏈？",
                 "optionNum":-1,
                 "option":
                 [
@@ -390,7 +390,7 @@
             {
                 "type":"option",
                 "name":"leo",
-                "text":"你確定不多考慮一下嗎？",
+                "text":"你確定不多考慮一下嗎？\nQ5:甚麼是比特幣？",
                 "optionNum":-1,
                 "option":
                 [
@@ -422,7 +422,7 @@
             {
                 "type":"option",
                 "name":"leo",
-                "text":"你確定不多考慮一下嗎？",
+                "text":"你確定不多考慮一下嗎？\nQ6:通過消耗CPU/GPU\n的電力和時間來產生比特\n幣，這個過程叫甚麼？",
                 "optionNum":-1,
                 "option":
                 [
