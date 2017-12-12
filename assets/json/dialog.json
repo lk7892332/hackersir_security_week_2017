@@ -11,6 +11,12 @@
             },
             {
                 "type":"dialog",
+                "name":"empty",
+                "text":"啥?你說什麼我怎麼聽不懂?\n(難道我剛剛放屁被他發現了?)",
+                "next":!!!!!!
+            },
+            {
+                "type":"dialog",
                 "name":"xue",
                 "text":"年紀輕輕的，就有一身橫\n練的筋骨，簡直是百年一\n見的駭客奇材。",
                 "next":2
@@ -32,6 +38,12 @@
                 "name":"xue",
                 "text":"警惡懲奸，維護網路和平\n的任務，就交給你了，好\n不好？",
                 "next":5
+            },
+            {
+                "type":"dialog",
+                "name":"empty",
+                "text":"哇!維護網路安全喔!那不就比駭客厲害\n好啊好啊!\n那我該怎麼做?",
+                "next":!!!!!!
             },
             {
                 "type":"dialog",
@@ -72,7 +84,7 @@
             {
                 "type":"dialog",
                 "name":"empty",
-                "text":"在取得駭客聖經秘笈後，\n你發現都是一些看不懂的\n字。",
+                "text":"OOXX他是不是騙我啊!這本書怎麼都寫一些我看不懂的文字?",
                 "next":9
             },
             {
@@ -90,7 +102,7 @@
             {
                 "type":"dialog",
                 "name":"empty",
-                "text":"解出地點，到那裡解開駭\n客聖經秘笈的秘密吧！",
+                "text":"凱薩加密法？這是什麼東西啊？可以吃嗎？",
                 "next":12
             },
             {
@@ -102,13 +114,25 @@
             {
                 "type":"dialog",
                 "name":"ray",
-                "text":"我的真正身份是\nHCLISE Ray",
+                "text":"我聽到你在說凱薩加密法，你一定很好奇我是誰？",
+                "next":!!!!!!
+            },
+            {
+                "type":"dialog",
+                "name":"empty",
+                "text":"沒有阿，我一點都不好奇",
+                "next":!!!!!!
+            },
+            {
+                "type":"dialog",
+                "name":"ray",
+                "text":"(忽略@說的話)其實我的真正身份是\nHCLISE Ray",
                 "next":14
             },
             {
                 "type":"dialog",
                 "name":"fei",
-                "text":"那是啥？",
+                "text":"那是啥？可以吃嗎？",
                 "next":15
             },
             {
@@ -150,12 +174,12 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"Q1:解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！",
+                "text":"解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！",
                 "optionNum":2,
                 "option":
                 [
                     "A: Hacker Training\nAcademy\n（駭客訓練學院）",
-                    "B: Feng Chia University"
+                    "B: Hackersir (黑客社)"
                 ],
                 "next":
                 [
@@ -166,12 +190,12 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"你確定不多考慮一下嗎？\nQ1:解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！",
+                "text":"你確定不多考慮一下嗎？\n解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！",
                 "optionNum":-1,
                 "option":
                 [
                     "A: Hacker Training Academy\n（駭客訓練學院）",
-                    "B: Feng Chia University"
+                    "B: Hackersir (黑客社)"
                 ],
                 "next":
                 [
@@ -188,13 +212,13 @@
             {
                 "type":"dialog",
                 "name":"xue",
-                "text":"駭客訓練學院是一個會教\n導一切有關於電腦知識的\n地方。",
+                "text":"稍等一下，駭客訓練學院是一個會教\n導一切有關於電腦知識的\n地方。",
                 "next":1
             },
                         {
                 "type":"dialog",
                 "name":"xue",
-                "text":"但在去學院之前你必須先\n給我10元，跟我買教材。",
+                "text":"但我看你好像手頭沒教材，在去學院之前你必須先\n給我10元，跟我買教材。",
                 "next":2
             },
             {
@@ -229,14 +253,20 @@
             },
             {
                 "type":"dialog",
+                "name":"fei",
+                "text":"可惡!我把我身上的錢都給他了!",
+                "next":!!!!!
+            },
+            {
+                "type":"dialog",
                 "name":"xue",
-                "text":"既然你給了我10元，現\n在你身上可是身無分文了\n，你必須先賺到旅費才能\n繼續接下來的旅行。",
+                "text":"你把你全部的錢都給我了，但是想要繼續走下去，你必須先賺到旅費才能。",
                 "next":5
             },
             {
                 "type":"dialog",
                 "name":"xue",
-                "text":"你繼續走會有一位叫做\nLeo three的人可以幫助\n到你。",
+                "text":"我就好心的提示你，繼續走會有一位叫做\nLeo three的人可以幫助\n到你。",
                 "next":6
             },
             {
@@ -246,9 +276,15 @@
                 "next":7
             },
             {
+                "type":"dialog",
+                "name":"fei",
+                "text":"這樣還叫作好心?",
+                "next":!!!!!
+            },
+            {
                 "type":"option",
                 "name":"xue",
-                "text":"Q2:我怕電腦中勒索病毒\n，因為我電腦裡有很多武\n功秘笈，你能不能告訴我\n怎樣才能避免勒索病毒？",
+                "text":"我怕電腦中勒索病毒\n，因為我電腦裡有很多武\n功秘笈，你能不能告訴我\n怎樣才能避免勒索病毒？",
                 "optionNum":3,
                 "option":
                 [
@@ -264,7 +300,7 @@
             {
                 "type":"option",
                 "name":"xue",
-                "text":"你確定不多考慮一下嗎？\nQ2:我怕電腦中勒索病毒\n，因為我電腦裡有很多武\n功秘笈，你能不能告訴我\n怎樣才能避免勒索病毒？",
+                "text":"你確定不多考慮一下嗎？\n我怕電腦中勒索病毒\n，因為我電腦裡有很多武\n功秘笈，你能不能告訴我\n怎樣才能避免勒索病毒？",
                 "optionNum":-1,
                 "option":
                 [
@@ -280,7 +316,7 @@
             {
                 "type":"option",
                 "name":"xue",
-                "text":"Q3:最近我的網頁一直跳\n出視窗，說點擊視窗就送\n我如來神掌秘笈，我好想\n要，請問我可以點嗎？",
+                "text":"最近我的網頁一直跳\n出視窗，說點擊視窗就送\n我如來神掌秘笈，我好想\n要，請問我可以點嗎？",
                 "optionNum":4,
                 "option":
                 [
@@ -296,7 +332,7 @@
             {
                 "type":"option",
                 "name":"xue",
-                "text":"你確定不多考慮一下嗎？\nQ3:最近我的網頁一直跳\n出視窗，說點擊視窗就送\n我如來神掌秘笈，我好想\n要，請問我可以點嗎？",
+                "text":"你確定不多考慮一下嗎？\n最近我的網頁一直跳\n出視窗，說點擊視窗就送\n我如來神掌秘笈，我好想\n要，請問我可以點嗎？",
                 "optionNum":-1,
                 "option":
                 [
@@ -308,6 +344,24 @@
                     -1,
                     10
                 ]
+            },
+            {
+                "type":"dialog",
+                "name":"xue",
+                "text":"既然你幫我解決了問題，我就把地圖給你吧!(給予@地圖)",
+                "next":!!!!!
+            },
+            {
+                "type":"dialog",
+                "name":"empty",
+                "text":"給予@地圖後，薛老舊消失了",
+                "next":!!!!!
+            },
+            {
+                "type":"dialog",
+                "name":"fei",
+                "text":"既然拿到地圖，我就去找Leo three解決問題吧!",
+                "next":!!!!!
             }
         ]
     },
@@ -335,14 +389,20 @@
             },
             {
                 "type":"dialog",
+                "name":"fei",
+                "text":"...好，隨便，請問你可以告訴我賺錢的方法嗎？",
+                "next":!!!!!
+            }
+            {
+                "type":"dialog",
                 "name":"leo",
-                "text":"我可以告訴你賺錢的方法\n，但在這之前你必須先回\n答我幾個問題。",
+                "text":"可以\n，但在這之前你必須先回\n答我幾個問題。",
                 "next":4
             },
             {
                 "type":"option",
                 "name":"leo",
-                "text":"Q4:甚麼是區塊鏈？",
+                "text":"甚麼是區塊鏈？",
                 "optionNum":5,
                 "option":
                 [
@@ -358,7 +418,7 @@
             {
                 "type":"option",
                 "name":"leo",
-                "text":"你確定不多考慮一下嗎？\nQ4:甚麼是區塊鏈？",
+                "text":"你確定不多考慮一下嗎？\n甚麼是區塊鏈？",
                 "optionNum":-1,
                 "option":
                 [
@@ -374,7 +434,7 @@
             {
                 "type":"option",
                 "name":"leo",
-                "text":"Q5:甚麼是比特幣？",
+                "text":"甚麼是比特幣？",
                 "optionNum":6,
                 "option":
                 [
@@ -390,7 +450,7 @@
             {
                 "type":"option",
                 "name":"leo",
-                "text":"你確定不多考慮一下嗎？\nQ5:甚麼是比特幣？",
+                "text":"你確定不多考慮一下嗎？\n甚麼是比特幣？",
                 "optionNum":-1,
                 "option":
                 [
@@ -406,7 +466,7 @@
             {
                 "type":"option",
                 "name":"leo",
-                "text":"Q6:通過消耗CPU/GPU\n的電力和時間來產生比特\n幣，這個過程叫甚麼？",
+                "text":"通過消耗CPU/GPU\n的電力和時間來產生比特\n幣，這個過程叫甚麼？",
                 "optionNum":7,
                 "option":
                 [
@@ -422,7 +482,7 @@
             {
                 "type":"option",
                 "name":"leo",
-                "text":"你確定不多考慮一下嗎？\nQ6:通過消耗CPU/GPU\n的電力和時間來產生比特\n幣，這個過程叫甚麼？",
+                "text":"你確定不多考慮一下嗎？\n通過消耗CPU/GPU\n的電力和時間來產生比特\n幣，這個過程叫甚麼？",
                 "optionNum":-1,
                 "option":
                 [
@@ -441,6 +501,12 @@
          "chapter":"chapterbg3",
          "content":
          [
+             {
+                "type":"dialog",
+                "name":"fei",
+                "text":"既然籌到旅費了，我要繼續冒險啦!",
+                "next":!!!!!!
+            },
              {
                  "type":"dialog",
                  "name":"empty",
