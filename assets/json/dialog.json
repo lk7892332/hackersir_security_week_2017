@@ -108,7 +108,7 @@
             {
                 "type":"dialog",
                 "name":"empty",
-                "text":"就在這時，一道黑影突然\n閃過，一位不知名的男子\n出現了！他開始介紹道",
+                "text":"就在這時，一道黑影突然\n閃過，一位不知名的男子\n出現了！他開始介紹道：",
                 "next":15
             },
             {
@@ -174,7 +174,7 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！\n（abc偏移一個單位\n變成bcd，dog變成eph。）",
+                "text":"解出用凱薩加密法加\n密的「Ibdlfs Usbjojoh\nBdbefnz」吧！\n（abc偏移一個單位\n變成bcd，dog變成eph。）",
                 "optionNum":2,
                 "option":
                 [
@@ -190,7 +190,7 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"你確定不多考慮一下嗎？解出用凱薩加密法加\n密的Ibdlfs Usbjojoh\nBdbefnz吧！\n（abc偏移一個單位\n變成bcd，dog變成eph。）",
+                "text":"你確定不多考慮一下嗎？解出用凱薩加密法加\n密的「Ibdlfs Usbjojoh\nBdbefnz」吧！\n（abc偏移一個單位\n變成bcd，dog變成eph。）",
                 "optionNum":-1,
                 "option":
                 [
@@ -266,7 +266,7 @@
             {
                 "type":"dialog",
                 "name":"xue",
-                "text":"我就好心的提示你，繼續\n走會有一位叫做Leo three\n的人可以幫助\n到你。",
+                "text":"我就好心的提示你，繼續\n走會有一位叫做Leo three\n的人可以幫助到你。",
                 "next":7
             },
             {
