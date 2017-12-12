@@ -174,7 +174,7 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"解出用凱薩加密法加\n密的「Ibdlfs Usbjojoh\nBdbefnz」吧！\n（abc偏移一個單位\n變成bcd，dog變成eph。）",
+                "text":"解出用凱薩加密法加\n密的「Ibdlfs Usbjojoh\nBdbefnz」吧！\n(abc→bcd,dog→eph)",
                 "optionNum":2,
                 "option":
                 [
@@ -190,7 +190,7 @@
             {
                 "type":"option",
                 "name":"empty",
-                "text":"你確定不多考慮一下嗎？\n解出用凱薩加密法加\n密的「Ibdlfs Usbjojoh\nBdbefnz」吧！\n（abc偏移一個單位\n變成bcd，dog變成eph。）",
+                "text":"你確定不多考慮一下嗎？\n解出用凱薩加密法加\n密的「Ibdlfs Usbjojoh\nBdbefnz」吧！\n(abc→bcd,dog→eph)",
                 "optionNum":-1,
                 "option":
                 [
@@ -278,7 +278,7 @@
             {
                 "type":"dialog",
                 "name":"fei",
-                "text":"這樣還叫作好心？",
+                "text":"（這樣還叫作好心？）",
                 "next":9
             },
             {
