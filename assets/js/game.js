@@ -153,7 +153,7 @@ game.States.mainMenu = function() {
         var reS = /^[demp]{1}[0-9]{7}$/i;
         var reT = /^[t]{1}[0-9]{5}$/i;
         if(!reS.test(idInput.value) && !reT.test(idInput.value)) {
-            alert("nid格式錯誤，請重新輸入。");
+            alert("NID格式錯誤，請重新輸入。");
             idInput.setText("");
             idInput.endFocus();
             nameInput.endFocus();
