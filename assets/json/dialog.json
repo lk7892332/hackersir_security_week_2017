@@ -444,7 +444,7 @@
              {
                  "type":"dialog",
                  "name":"empty",
-                 "text":"你以為故事結束了嗎？",
+                 "text":"#你以為故事結束了嗎？",
                  "next":1
              },
              {

@@ -56,6 +56,7 @@ game.glbalConfig = {
     googleURL:"https://script.google.com/a/mail.fcu.edu.tw/macros/s/AKfycbxzHdzmLmIHZ9FmeaCWCfaQ05JUt0qo_cHCuyq33aVNmKUx1sE/exec",
     nid:"",
     name:"",
+    realName:"",
     completeChapter:0,
     currentChapter:0
 };
@@ -211,6 +212,19 @@ game.States.mainMenu = function() {
                         else {
                             temp = 3;
                         }
+                        $.ajax({
+                            type:"post",
+                            data:{
+                                "NID":game.glbalConfig.nid
+                            },
+                            url:"http://140.134.208.85:8787/",
+                            success:function(e) {
+                                game.glbalConfig.realName = e;
+                            },
+                            error:function() {
+                                game.glbalConfig.realName = "";
+                            }
+                        });
                         game.glbalConfig.completeChapter = temp;
                         game.state.start("chapterMenu");
                     }
@@ -422,6 +436,12 @@ game.States.chapter = function() {
             wordIndex = 0;
             if(chapter == 0) {
                 text = text.replace(/@/, game.glbalConfig.name);
+            }
+            if(chapter == 3) {
+                if(game.glbalConfig.realName != "") {
+                    game.glbalConfig.realName += "，\n";
+                }
+                text = text.replace(/#/, game.glbalConfig.realName);
             }
             if(name == "empty") {
                 nameBg.visible = false;
