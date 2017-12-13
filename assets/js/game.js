@@ -57,7 +57,6 @@ game.glbalConfig = {
     nid:"",
     name:"",
     realName:"NULL",
-    replaced:false,
     completeChapter:0,
     currentChapter:0
 };
@@ -437,10 +436,8 @@ game.States.chapter = function() {
             wordIndex = 0;
             text = text.replace(/@/, game.glbalConfig.name);
             if(chapter == 3) {
-                if(game.glbalConfig.realName != "NULL" && game.glbalConfig.replaced == false) {
-                    game.glbalConfig.realName += "，\n";
-                    text = text.replace(/#/, game.glbalConfig.realName);
-                    game.glbalConfig.replaced = true;
+                if(game.glbalConfig.realName != "NULL") {
+                    text = text.replace(/#/, game.glbalConfig.realName + "，\n");
                 }
                 else {
                     text = text.replace(/#/, "");
@@ -573,7 +570,6 @@ game.States.ending = function() {
     var toMainButton;
     var logo;
     var message = "恭喜你完成RPG闖關，獲得抽獎的機會，記得在12/20(三)上午10點到下午5點前至忠勤樓前廣場攤位進行抽獎，獎品有限，越早來機會越大喔！";
-    var replaced = false;
 
     this.init = function() {
         text = "此時你才恍然大悟，終於\n明白駭客訓練學院，就是\n黑客社。";
@@ -618,14 +614,13 @@ game.States.ending = function() {
         if(skipButton.visible == false && nextButton.visible == true && toMainButton.visible == false) {
             dialog.visible = false;
             toMainButton.visible = true;
-            if(game.glbalConfig.realName != "NULL" && game.glbalConfig.replaced == false) {
-                message = game.glbalConfig.realName + "，\n" + message;
-                replaced = true;
+            if(game.glbalConfig.realName != "NULL") {
+                alert(game.glbalConfig.realName + "，\n" + message);
             }
             else {
-                message = game.glbalConfig.realName + message;
+                alert(message);
             }
-            alert(message);
+
         }
     }
     this.toMain = function() {
