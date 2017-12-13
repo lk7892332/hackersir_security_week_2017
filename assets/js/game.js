@@ -57,7 +57,7 @@ game.glbalConfig = {
     nid:"",
     name:"",
     realName:"NULL",
-    replaced:false;
+    replaced:false,
     completeChapter:0,
     currentChapter:0
 };
