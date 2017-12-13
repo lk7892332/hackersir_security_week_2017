@@ -56,7 +56,7 @@ game.glbalConfig = {
     googleURL:"https://script.google.com/a/mail.fcu.edu.tw/macros/s/AKfycbxzHdzmLmIHZ9FmeaCWCfaQ05JUt0qo_cHCuyq33aVNmKUx1sE/exec",
     nid:"",
     name:"",
-    realName:"",
+    realName:"NULL",
     completeChapter:0,
     currentChapter:0
 };
@@ -436,7 +436,7 @@ game.States.chapter = function() {
             wordIndex = 0;
             text = text.replace(/@/, game.glbalConfig.name);
             if(chapter == 3) {
-                if(game.glbalConfig.realName != "") {
+                if(game.glbalConfig.realName != "NULL") {
                     game.glbalConfig.realName += "，\n";
                 }
                 text = text.replace(/#/, game.glbalConfig.realName);
@@ -612,7 +612,7 @@ game.States.ending = function() {
         if(skipButton.visible == false && nextButton.visible == true && toMainButton.visible == false) {
             dialog.visible = false;
             toMainButton.visible = true;
-            if(game.glbalConfig.realName != "") {
+            if(game.glbalConfig.realName != "NULL") {
                 message = game.glbalConfig.realName + "，" + message;
             }
             alert(message);
