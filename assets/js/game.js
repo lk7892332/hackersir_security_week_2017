@@ -442,7 +442,7 @@ game.States.chapter = function() {
                     text = text.replace(/#/, game.glbalConfig.realName);
                     game.glbalConfig.replaced = true;
                 }
-                else if(game.glbalConfig.realName == "NULL") {
+                else {
                     text = text.replace(/#/, "");
                 }
             }
