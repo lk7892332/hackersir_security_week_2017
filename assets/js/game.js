@@ -57,6 +57,7 @@ game.glbalConfig = {
     nid:"",
     name:"",
     realName:"NULL",
+    replaced:false;
     completeChapter:0,
     currentChapter:0
 };
@@ -436,8 +437,9 @@ game.States.chapter = function() {
             wordIndex = 0;
             text = text.replace(/@/, game.glbalConfig.name);
             if(chapter == 3) {
-                if(game.glbalConfig.realName != "NULL") {
+                if(game.glbalConfig.realName != "NULL" && game.glbalConfig.replaced == false) {
                     game.glbalConfig.realName += "，\n";
+                    game.glbalConfig.replaced = true;
                 }
                 text = text.replace(/#/, game.glbalConfig.realName);
             }
@@ -613,9 +615,12 @@ game.States.ending = function() {
         if(skipButton.visible == false && nextButton.visible == true && toMainButton.visible == false) {
             dialog.visible = false;
             toMainButton.visible = true;
-            if(game.glbalConfig.realName != "NULL" && replaced == false) {
+            if(game.glbalConfig.realName != "NULL" && game.glbalConfig.replaced == false) {
+                message = game.glbalConfig.realName + ",\n" + message;
                 replaced = true;
-                message = game.glbalConfig.realName + "，" + message;
+            }
+            else if(game.glbalConfig.realName != "NULL" && game.glbalConfig.replaced == true) {
+                message = game.globalConfig.realName + message;
             }
             alert(message);
         }
