@@ -616,7 +616,7 @@ game.States.ending = function() {
             dialog.visible = false;
             toMainButton.visible = true;
             if(game.glbalConfig.realName != "NULL" && game.glbalConfig.replaced == false) {
-                message = game.glbalConfig.realName + ",\n" + message;
+                message = game.glbalConfig.realName + "，\n" + message;
                 replaced = true;
             }
             else if(game.glbalConfig.realName != "NULL" && game.glbalConfig.replaced == true) {
