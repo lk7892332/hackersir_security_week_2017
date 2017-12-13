@@ -439,9 +439,9 @@ game.States.chapter = function() {
             if(chapter == 3) {
                 if(game.glbalConfig.realName != "NULL" && game.glbalConfig.replaced == false) {
                     game.glbalConfig.realName += "，\n";
+                    text = text.replace(/#/, game.glbalConfig.realName);
                     game.glbalConfig.replaced = true;
                 }
-                text = text.replace(/#/, game.glbalConfig.realName);
             }
             if(name == "empty") {
                 nameBg.visible = false;
