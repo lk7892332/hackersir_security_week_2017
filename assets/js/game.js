@@ -83,7 +83,7 @@ game.States.loading = function() {
     this.preload = function() {
         loadImg = game.add.image(game.world.centerX, game.world.centerY, "logo");
         loadImg.anchor.setTo(0.5, 0.5);
-        loadText = game.add.text(game.world.centerX, game.world.centerY + 500, "Loading...", loadingTextStyle);
+        loadText = game.add.text(game.world.centerX, game.world.centerY + 500, "檔案讀取中\n檔案有點大\n請等一下喔", loadingTextStyle);
         loadText.anchor.setTo(0.5, 0.5);
         game.load.image("titlebg", "assets/img/titlebg.png");
         game.load.image("chapterbg", "assets/img/chapterbg.png");
