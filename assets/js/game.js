@@ -622,7 +622,7 @@ game.States.ending = function() {
                 message = game.glbalConfig.realName + "，\n" + message;
                 replaced = true;
             }
-            else if(game.glbalConfig.realName != "NULL" && game.glbalConfig.replaced == true) {
+            else {
                 message = game.glbalConfig.realName + message;
             }
             alert(message);
