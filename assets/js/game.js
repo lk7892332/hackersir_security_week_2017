@@ -620,7 +620,7 @@ game.States.ending = function() {
                 replaced = true;
             }
             else if(game.glbalConfig.realName != "NULL" && game.glbalConfig.replaced == true) {
-                message = game.globalConfig.realName + message;
+                message = game.glbalConfig.realName + message;
             }
             alert(message);
         }
