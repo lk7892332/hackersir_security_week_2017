@@ -217,7 +217,7 @@ game.States.mainMenu = function() {
                             data:{
                                 "NID":game.glbalConfig.nid
                             },
-                            url:"http://140.134.208.85:8787/",
+                            url:"https://course.123ojp.me/NID/",
                             success:function(e) {
                                 game.glbalConfig.realName = e;
                             },
