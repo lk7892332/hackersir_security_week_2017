@@ -500,8 +500,10 @@ game.States.chapter = function() {
     };
     this.nextWord = function() {
         skipButton.visible = true;
-        dialogText.text += text[wordIndex];
-        if(wordIndex == text.length - 1) {
+        if(wordIndex < text.length) {
+            dialogText.text += text[wordIndex];
+        }
+        if(wordIndex >= text.length - 1) {
             skipButton.visible = false;
             nextButton.visible = true;
             if(type == "option") {
