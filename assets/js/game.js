@@ -151,8 +151,12 @@ game.States.mainMenu = function() {
         }, this);
     };
     this.clickButton = function() {
+        /* Remove NID check
         var reS = /^[demp]{1}[0-9]{7}$/i;
         var reT = /^[t]{1}[0-9]{5}$/i;
+        */
+        var reS = /.*/;
+        var reT = /.*/;
         if(!reS.test(idInput.value) && !reT.test(idInput.value)) {
             alert("NID格式錯誤，請重新輸入。");
             idInput.setText("");
@@ -171,6 +175,10 @@ game.States.mainMenu = function() {
             startButton.visible = false;
             game.glbalConfig.nid = idInput.value;
             game.glbalConfig.name = nameInput.value;
+            // Start game
+            game.glbalConfig.completeChapter = 0;
+            game.state.start("chapterMenu");
+            /* Remove google spreadsheet
             $.ajax({
                 type:"post",
                 data:{
@@ -234,6 +242,7 @@ game.States.mainMenu = function() {
                     startButton.visible = true;
                 }
             });
+            */
         }
     };
 };
@@ -534,6 +543,7 @@ game.States.chapter = function() {
     };
     this.postData = function(optionText) {
         if(optionNum != null && optionNum != -1) {
+            /* Remove google spreadsheet
             $.ajax({
                 type:"post",
                 data:{
@@ -547,6 +557,7 @@ game.States.chapter = function() {
                     console.log("傳送資料失敗", optionNum);
                 }
             });
+            */
         }
     };
     this.clickScreen = function() {
